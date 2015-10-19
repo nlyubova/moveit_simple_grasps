@@ -8,10 +8,12 @@ left_hand:
     joints : ['LHand']
 
     #open position
+    #pregrasp_posture : [1.0] #for the real robot
     pregrasp_posture : [0.0] #for sim
     pregrasp_time_from_start : 4.0
 
     #close position
+    #grasp_posture : [0.0] #for the real robot
     grasp_posture : [1.0] #for sim
     grasp_time_from_start : 4.0
 
@@ -30,10 +32,12 @@ right_hand:
     joints : ['RHand']
 
     #open position
+    #pregrasp_posture : [1.0] #for the real robot
     pregrasp_posture : [0.0] #for sim
     pregrasp_time_from_start : 4.0
 
     #close position
+    #grasp_posture : [0.0] #for the real robot
     grasp_posture : [1.0] #for sim
     grasp_time_from_start : 4.0
 
