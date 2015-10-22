@@ -201,7 +201,10 @@ bool GraspData::loadRobotGraspData(const ros::NodeHandle& nh, const std::string&
 
   // Orientation
   ROS_ASSERT(grasp_pose_to_eef_rotation.size() == 3);
-  Eigen::Quaterniond quat(Eigen::AngleAxis<double>(double(grasp_pose_to_eef_rotation[1]), Eigen::Vector3d::UnitY())); // turn on Z axis
+  Eigen::Quaterniond quat(
+        Eigen::AngleAxis<double>(double(grasp_pose_to_eef_rotation[0]), Eigen::Vector3d::UnitX())
+        * Eigen::AngleAxis<double>(double(grasp_pose_to_eef_rotation[1]), Eigen::Vector3d::UnitY())
+        * Eigen::AngleAxis<double>(double(grasp_pose_to_eef_rotation[2]), Eigen::Vector3d::UnitZ()));
   // TODO: rotate for roll and yaw also, not just pitch (unit y)
   // but i don't need that feature right now and it might be tricky
   grasp_pose_to_eef_pose_.orientation.x = quat.x();
@@ -276,11 +279,11 @@ bool GraspData::setRobotState( robot_state::RobotStatePtr &robot_state, const tr
   {
     // Debug
     std::cout << "Setting joint " << posture.joint_names[i] << " to value " 
-              << posture.points[i].positions[0] << std::endl;
+              << posture.points[0].positions[i] << std::endl;
 
     // Set joint position
     robot_state->setJointPositions( posture.joint_names[i],
-                                    posture.points[i].positions );
+                                    posture.points[0].positions );
   }
 }
 

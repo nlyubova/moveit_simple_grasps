@@ -238,7 +238,7 @@ bool SimpleGrasps::generateAxisGrasps(
     // With respect to the base link/world frame
 
     // Approach
-    pre_grasp_approach.direction.header.frame_id = grasp_data.base_link_;
+    /*pre_grasp_approach.direction.header.frame_id = grasp_data.base_link_;
     pre_grasp_approach.direction.vector.x = 0;
     pre_grasp_approach.direction.vector.y = 0;
     pre_grasp_approach.direction.vector.z = -1; // Approach direction (negative z axis)  // TODO: document this assumption
@@ -252,7 +252,7 @@ bool SimpleGrasps::generateAxisGrasps(
     new_grasp.post_grasp_retreat = post_grasp_retreat;
 
     // Add to vector
-    possible_grasps.push_back(new_grasp);
+    possible_grasps.push_back(new_grasp);*/
 
     // Angled with pose -------------------------------------------------------------------------------------
     // Approach with respect to end effector orientation
@@ -261,14 +261,14 @@ bool SimpleGrasps::generateAxisGrasps(
     pre_grasp_approach.direction.header.frame_id = grasp_data.ee_parent_link_;
     pre_grasp_approach.direction.vector.x = 0;
     pre_grasp_approach.direction.vector.y = 0;
-    pre_grasp_approach.direction.vector.z = 1;
+    pre_grasp_approach.direction.vector.z = -1;
     new_grasp.pre_grasp_approach = pre_grasp_approach;
 
     // Retreat
     post_grasp_retreat.direction.header.frame_id = grasp_data.ee_parent_link_;
     post_grasp_retreat.direction.vector.x = 0;
     post_grasp_retreat.direction.vector.y = 0;
-    post_grasp_retreat.direction.vector.z = -1;
+    post_grasp_retreat.direction.vector.z = 1;
     new_grasp.post_grasp_retreat = post_grasp_retreat;
 
     // Add to vector
