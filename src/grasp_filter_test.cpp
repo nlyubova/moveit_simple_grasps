@@ -186,6 +186,8 @@ public:
       visual_tools_->publishAnimatedGrasps(possible_grasps, ee_jmg);
       const robot_model::JointModelGroup* arm_jmg = planning_scene_monitor_->getRobotModel()->getJointModelGroup(planning_group_name_);
       visual_tools_->publishIKSolutions(ik_solutions, arm_jmg, 0.25);
+      //visual_tools_->publishAnimatedGrasps(possible_grasps, grasp_data_.ee_parent_link_);      
+      //visual_tools_->publishIKSolutions(ik_solutions, planning_group_name_, 0.25);
 
       // Make sure ros is still going
       if(!ros::ok())
