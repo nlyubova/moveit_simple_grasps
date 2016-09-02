@@ -8,11 +8,11 @@ left_hand:
     joints : ['LHand']
 
     #open position
-    pregrasp_posture : [1.0] #for sim
+    pregrasp_posture : [0.02] #for sim
     pregrasp_time_from_start : 4.0
 
     #close position
-    grasp_posture : [0.0] #for sim
+    grasp_posture : [0.8] #for sim
     grasp_time_from_start : 4.0
 
     #desired pose from end effector to grasp - [x,y,z]
@@ -30,11 +30,11 @@ right_hand:
     joints : ['RHand']
 
     #open position
-    pregrasp_posture : [1.0] #for sim
+    pregrasp_posture : [0.02] #for sim
     pregrasp_time_from_start : 4.0
 
     #close position
-    grasp_posture : [0.0] #for sim
+    grasp_posture : [0.8] #for sim
     grasp_time_from_start : 4.0
 
     #desired pose from end effector to grasp - [x,y,z]
