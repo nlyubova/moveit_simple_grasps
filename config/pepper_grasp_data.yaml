@@ -18,8 +18,8 @@ left_hand:
     #desired pose from end effector to grasp - [x,y,z]
     #desired pose from end effector to grasp - [r, p, y] #1.5707 = PI/2
     #side grasp -65deg
-    grasp_pose_to_eef : [-0.09, 0.036, -0.02]
-    grasp_pose_to_eef_rotation : [-1.22, 0.0, 0.0]
+    grasp_pose_to_eef : [-0.09, 0.03, -0.02]
+    grasp_pose_to_eef_rotation : [-1.2, -0.1, 0.0]
 
     end_effector_parent_link: 'l_wrist'
 # =====================================================
