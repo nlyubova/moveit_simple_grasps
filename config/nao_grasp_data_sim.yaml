@@ -1,4 +1,4 @@
-base_link: '/odom'
+base_link: 'base_link'
 
 # =====================================================
 left_hand:
