@@ -8,11 +8,11 @@ left_hand:
     joints : ['LHand']
 
     #open position
-    pregrasp_posture : [0.8]
+    pregrasp_posture : [0.02]
     pregrasp_time_from_start : 4.0
 
     #close position
-    grasp_posture : [0.02]
+    grasp_posture : [0.8]
     grasp_time_from_start : 4.0
 
     #desired pose from end effector to grasp - [x,y,z]
@@ -30,11 +30,11 @@ right_hand:
     joints : ['RHand']
 
     #open position
-    pregrasp_posture : [0.8]
+    pregrasp_posture : [0.02]
     pregrasp_time_from_start : 4.0
 
     #close position
-    grasp_posture : [0.02]
+    grasp_posture : [0.8]
     grasp_time_from_start : 4.0
 
     #desired pose from end effector to grasp - [x,y,z]
